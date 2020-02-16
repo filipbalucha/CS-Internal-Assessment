@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="800.0" stylesheets="@../Stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FrontEnd.Screens.CreateGroupsController">
+   <children>
+      <ComboBox fx:id="comboBox" layoutX="43.0" layoutY="132.0" maxHeight="30.0" prefHeight="30.0" prefWidth="231.0" />
+      <Pane fx:id="groupPane" layoutX="344.0" layoutY="132.0" prefHeight="438.0" prefWidth="430.0">
+         <children>
+            <Text fx:id="noGroupsMessage" fill="#a3a3b7" layoutX="102.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No groups created" wrappingWidth="226.65918900545466">
+               <font>
+                  <Font name="STXihei" size="22.0" />
+               </font>
+            </Text>
+            <ScrollPane fx:id="scrollPane" maxHeight="5000.0" prefHeight="440.0" prefWidth="430.0">
+               <content>
+                  <AnchorPane id="anchor" minHeight="0.0" minWidth="0.0" prefWidth="430.0">
+                     <children>
+                        <VBox fx:id="groupList" prefHeight="438.0" prefWidth="430.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Slider fx:id="slider" layoutX="43.0" layoutY="186.0" prefHeight="16.0" prefWidth="282.0" />
+      <Text fill="#e2b258" layoutX="220.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Groups">
+         <font>
+            <Font name="STHeiti" size="50.0" />
+         </font>
+      </Text>
+      <TextField fx:id="numberOutput" layoutX="276.0" layoutY="133.0" prefHeight="27.0" prefWidth="50.0" />
+      <Text fill="#a3a3b7" layoutX="59.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter gender:" wrappingWidth="154.4000244140625">
+         <font>
+            <Font name="STXihei" size="22.0" />
+         </font>
+      </Text>
+      <Text fill="#a3a3b7" layoutX="59.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter class:" wrappingWidth="154.4000244140625">
+         <font>
+            <Font name="STXihei" size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="butCreate" layoutX="43.0" layoutY="300.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="282.0" text="Create">
+         <font>
+            <Font name="STXihei" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="butExport" layoutX="43.0" layoutY="440.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="282.0" text="Export">
+         <font>
+            <Font name="STXihei" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="butBack" layoutX="43.0" layoutY="510.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="282.0" text="Back">
+         <font>
+            <Font name="STXihei" size="30.0" />
+         </font>
+      </Button>
+      <ToggleButton fx:id="genderToggle" layoutX="220.0" layoutY="222.0" mnemonicParsing="false" text="NO" />
+      <ToggleButton fx:id="classToggle" layoutX="220.0" layoutY="259.0" mnemonicParsing="false" text="NO" />
+      <Button fx:id="butClear" layoutX="43.0" layoutY="370.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="282.0" text="Clear" />
+   </children>
+</AnchorPane>
